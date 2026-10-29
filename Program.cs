@@ -1,17 +1,11 @@
-﻿//using CSharpShell.Services;
-namespace CSharpShell;
-
 class Program
 {
     static void Main()
     {
-        string? userInput = null;
-        do
+        string? command;
+        while ((command = Console.ReadLine()) != "exit")
         {
-            var args = userInput?.Split(" ") ?? Array.Empty<string>();
-            Parser.ParseCommand(args);
+            if (command == null) continue;
         }
-        while ((userInput = Console.ReadLine()) != "exit");
     }
-
 }
