@@ -3,7 +3,7 @@ public static class BuiltIns
 {
     readonly static Dictionary<string, Action<string[]>> _BuiltInCommands = new()
     {
-        { "ls", _ => List() },
+        { "ls", args => List(args) },
         { "cd", args => ChangeDirectory(args) },
         { "pwd", _ => PresentWorkingDirectory() },
         { "clear", _ => Console.Clear() },
